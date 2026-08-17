@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little World Made For You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bloom pin-locked">
+
+    <!-- PARTICLES -->
+    <div id="particles"></div>
+
+    <!-- =========================================
+     💌 LOVE ENVELOPE OPENING
+    ========================================= -->
+
+<section id="opening" class="screen active">
+
+    <div class="love-opening">
+
+        <div class="tiny-label">
+            JUST FOR YOU ♡
+        </div>
+
+        <h1 class="opening-title">
+            A little surprise
+            <br>
+            <em>waiting for you...</em>
+        </h1>
+
+
+        <!-- =====================================
+             ENVELOPE
+        ====================================== -->
+
+        <div class="envelope-area">
+
+            <div class="envelope" id="loveEnvelope">
+
+                <div class="envelope-back"></div>
+
+                <div class="envelope-letter">
+                    <img src="dudu-bubu.gif" alt="Dudu Bubu">
+                </div>
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-front"></div>
+
+                <div class="envelope-heart">
+                    ♥
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             OPEN WITH LOVE
+        ====================================== -->
+
+        <button
+            id="openLoveBtn"
+            class="love-button"
+            type="button">
+
+            OPEN WITH LOVE
+            <span>♡</span>
+
+        </button>
+
+
+        <!-- =====================================
+             SECRET / PIN AREA
+        ====================================== -->
+
+        <div
+            id="secretArea"
+            class="secret-area">
+
+
+            <!-- DUDU BUBU VIDEO -->
+
+            <div class="dudu-bubu">
+
+                <video
+                    src="dudu-bubu.mp4"
+                    autoplay
+                    loop
+                    muted
+                    playsinline>
+                </video>
+
+                <div class="floating-heart">
+                    ♡
+                </div>
+
+                <div class="floating-heart heart-two">
+                    ♡
+                </div>
+
+                <div class="floating-heart heart-three">
+                    ♡
+                </div>
+
+            </div>
+
+
+            <h2>
+                Only you can unlock this...
+            </h2>
+
+            <p class="secret-subtitle">
+                Enter our little secret ♡
+            </p>
+
+
+            <!-- =================================
+                 PIN LOCK
+            ================================== -->
+
+            <div class="pin-lock">
+
+                <div class="lock-icon">
+                    ♡
+                </div>
+
+                <p class="pin-title">
+                    Our little secret
+                </p>
+
+                <p class="pin-hint">
+                    Tap the hearts to enter the PIN
+                </p>
+
+
+                <!-- PIN HEART DISPLAY -->
+
+                <div
+                    class="heart-pin-display"
+                    id="pinDisplay">
+
+                    <span>♡</span>
+                    <span>♡</span>
+                    <span>♡</span>
+                    <span>♡</span>
+
+                </div>
+
+
+                <!-- HEART KEYPAD -->
+
+                <div class="heart-keypad">
+
+                    <button
+                        class="heart-key"
+                        data-number="1"
+                        type="button">
+                        1
+                    </button>
+
+                    <button
+                        class="heart-key"
+                        data-number="2"
+                        type="button">
+                        2
+                    </button>
+
+                    <button
+                        class="heart-key"
+                        data-number="3"
+                        type="button">
+                        3
+                    </button>
+
+
+                    <button
+                        class="heart-key"
+                        data-number="4"
+                        type="button">
+                        4
+                    </button>
+
+                    <button
+                        class="heart-key"
+                        data-number="5"
+                        type="button">
+                        5
+                    </button>
+
+                    <button
+                        class="heart-key"
+                        data-number="6"
+                        type="button">
+                        6
+                    </button>
+
+
+                    <button
+                        class="heart-key"
+                        data-number="7"
+                        type="button">
+                        7
+                    </button>
+
+                    <button
+                        class="heart-key"
+                        data-number="8"
+                        type="button">
+                        8
+                    </button>
+
+                    <button
+                        class="heart-key"
+                        data-number="9"
+                        type="button">
+                        9
+                    </button>
+
+
+                    <button
+                        class="heart-key heart-clear"
+                        data-number="clear"
+                        type="button">
+                        ×
+                    </button>
+
+                    <button
+                        class="heart-key"
+                        data-number="0"
+                        type="button">
+                        0
+                    </button>
+
+                    <button
+                        class="heart-key heart-delete"
+                        data-number="delete"
+                        type="button">
+                        ⌫
+                    </button>
+
+                </div>
+
+
+                <!-- UNLOCK -->
+
+                <button
+                    id="unlockBtn"
+                    class="unlock-button"
+                    type="button">
+
+                    UNLOCK MY HEART ♡
+
+                </button>
+
+                <p id="pinMessage"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="hero" class="screen">
+
+        <div class="hero-glow"></div>
+
+        <div class="hero-content">
+
+            <div class="tiny-label">
+                TODAY IS DIFFERENT
+            </div>
+
+            <h2>
+                Today isn't<br>
+                <em>just another day.</em>
+            </h2>
+
+            <div class="hero-line"></div>
+
+            <p class="hero-description">
+                Because today is the day
+                <strong id="personName">A Special Person</strong>
+                came into this world.
+            </p>
+
+            <h1 class="birthday-title">
+                Happiest Birthday
+                <span> MY WHOLE WORLD</span>
+                <b>♡</b>
+            </h1>
+
+            <button class="continue-btn" data-next="letter">
+                Continue ↓
+            </button>
+
+        </div>
+
+    </section>
+
+<!-- ================= LETTER ================= -->
+
+<section id="letter" class="section letter-section">
+
+    <div class="section-heading">
+
+        <span class="section-number">01</span>
+
+        <p>A LITTLE COLLECTION</p>
+
+        <h2>
+            Of my<br>
+            <em>feelings for you.</em>
+        </h2>
+
+    </div>
+
+
+    <!-- CLICKABLE CLOSED LETTER -->
+
+    <div class="letter-reveal" id="letterReveal">
+
+        <div class="letter-cover">
+
+            <div class="cover-heart">♡</div>
+
+            <p class="cover-small">
+                A LITTLE LETTER
+            </p>
+
+            <h3>
+                These words are<br>
+                <em>all from my heart.</em>
+            </h3>
+
+            <p class="cover-hint">
+                Click to open ♡
+            </p>
+
+            <div class="cover-line"></div>
+
+        </div>
+
+
+        <!-- ACTUAL LETTER -->
+
+        <div class="letter-inside" id="letterPage">
+
+            <div class="paper-top">
+                <span>
+                    Dear <span id="letterName">You</span>,
+                </span>
+
+                <span>♡</span>
+            </div>
+
+
+            <div class="letter-text">
+
+                Har din sochti hun ki aisa kya likhun..ki woh padh kar soche
+                yeh kitni pagal hai mere liye..🤗
+                Mere pass woh alfaz hi nahi hai jo is baat ko bayan kar sakhe
+                k tum mere liye kya ho..❤ bas itna keh sakti hun ki 
+                tum toh meri puri duniya ho yaarw..🥺Meri duniya wahan tak
+                khubsurat hai jahan tak "Tum mere saath ho.✨"
+                In English we say : "I'm so deeply in love with you"
+                but>> I wanna say - Bas Ek tum mujhe miljao toh meri saari 
+                duniya mukammal hojaye❣
+                Tum to mere dil k pasandia shaqs ho..mere dost ho..mera sukoon ho..
+                mera sab kuch tum ho..in short woh kehte hai na..
+                "Aur phir mere liye toh mohabbat ka matlab hi tum ho.."🥺❣
+                Mera duduuu babyyy chahe my lado..gussa karo ya kuch b karo..magar
+                apse durr jaane ka kabhi soch hi nai sakti..aur na hi kabhi jauingi..
+                REMEMBER THAT!!
+                Aann kya dollars daalri nkko samjho abhh😂sacchi me i mean it all.
+                nd..I love you more than you could ever imagine..💘
+                Once again wish you a happiest birthday meri jaan..Allah apku har kadam
+                par kamyabi de, sehet de, bohat saari khushiya de..is duniya me aur aaqhirat me.
+                Aur Allah hum dono k bich aise hi mohabbat banaye rakhe aur hamara 
+                nikaah asaan farmaye.
+                AMEEN.🥺💕
+
+
+            </div>
+
+
+            <div class="signature">
+
+                With love,<br>
+
+                <span id="senderName">
+                    Someone who cares ♡
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button class="continue-btn" data-next="memories">
+        There is more ↓
+    </button>
+
+</section>
+
+
+    <!-- ================= MEMORIES ================= -->
+
+    <section id="memories" class="section">
+
+        <div class="section-heading">
+
+            <span class="section-number">02</span>
+
+            <p>OUR LITTLE STORY</p>
+
+            <h2>
+                Some moments<br>
+                <em>worth keeping.</em>
+            </h2>
+
+        </div>
+
+        <div class="memory-timeline">
+
+            <div class="timeline-line"></div>
+
+            <div class="memory-item">
+
+                <div class="memory-dot">01</div>
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+                        <img src="1.jpeg"
+                             alt="Memory">
+                    </div>
+
+                    <div class="memory-info">
+
+                        <span>THE BEGINNING</span>
+
+                        <h3>Where it all started.</h3>
+
+                        <p>
+                            Maybe this was just another day.
+                            But somehow, it became one worth remembering.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="memory-item reverse">
+
+                <div class="memory-dot">02</div>
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+                        <img src="2.jpeg"
+                             alt="Memory">
+                    </div>
+
+                    <div class="memory-info">
+
+                        <span>A FAVORITE MEMORY</span>
+
+                        <h3>That one moment.</h3>
+
+                        <p>
+                            Hyd trip😂
+                            Some memories don't need a reason to stay.
+                            They simply become part of us.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="memory-item">
+
+                <div class="memory-dot">03</div>
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+                        <img src="3.jpeg"
+                             alt="Memory">
+                    </div>
+
+                    <div class="memory-info">
+
+                        <span>TODAY</span>
+
+                        <h3>And here we are.</h3>
+
+                        <p>
+                            Another year. Another chapter.
+                            And hopefully, many more memories ahead.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="continue-btn" data-next="appreciation">
+            Keep going ↓
+        </button>
+
+    </section>
+
+
+    <!-- ================= APPRECIATION ================= -->
+
+    <section id="appreciation" class="section">
+
+        <div class="section-heading">
+
+            <span class="section-number">03</span>
+
+            <p>A FEW THINGS</p>
+
+            <h2>
+                Why you're<br>
+                <em>special.</em>
+            </h2>
+
+        </div>
+
+        <div class="reason-grid">
+
+            <div class="reason-card">
+                <span>01</span>
+                <h3>Your smile.</h3>
+                <p>
+                    You probably don't realize how much happiness it brings 
+                    to me..coz when you smile I automatically smiles too..😙
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <span>02</span>
+                <h3>Your heart.</h3>
+                <p>
+                    The way you love and care for me? No one
+                    else could ever match a bit of that.💘
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <span>03</span>
+                <h3>Your presence.</h3>
+                <p>
+                    You don't have to say a word or do anything, just
+                    having you around gives my heart a peace I can't explain.❤️
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <span>04</span>
+                <h3>Just you.</h3>
+                <p>
+                    No explanation needed.
+                    You're everything my heart could ever ask for.💕
+                </p>
+            </div>
+
+        </div>
+
+        <button class="continue-btn" data-next="gifts">
+            I left something for you ↓
+        </button>
+
+    </section>
+
+
+    <!-- ================= GIFTS ================= -->
+
+    <section id="gifts" class="section">
+
+        <div class="section-heading">
+
+            <span class="section-number">04</span>
+
+            <p>A LITTLE MYSTERY</p>
+
+            <h2>
+                I left a few<br>
+                <em>things for you.</em>
+            </h2>
+
+        </div>
+
+        <div class="gift-grid">
+
+            <button class="gift" data-message="عطايا الله جميلة، وأنت أجملها. ♡Allah's gifts are beautiful, and you are the most beautiful one.❤">
+                <div class="gift-box">
+                    🎁
+                </div>
+                <span>OPEN ME</span>
+            </button>
+
+            <button class="gift" data-message="Soo..mera duduu babyy apki yeh bubuu baby hamesha apke liye pagal hi rahegi..😉💖">
+                <div class="gift-box">
+                    💌
+                </div>
+                <span>OPEN ME</span>
+            </button>
+
+            <button class="gift" data-message="Allah hum dono k bich aise hi mohabbat banaye rakhe aur hamesha saath rakhe, fi duniyah wal akhirah💕Ameen">
+                <div class="gift-box">
+                    🔐
+                </div>
+                <span>OPEN ME</span>
+            </button>
+
+        </div>
+
+        <div id="giftMessage" class="gift-message">
+            <span></span>
+        </div>
+
+        <button class="continue-btn" data-next="cake">
+            One last thing ↓
+        </button>
+
+    </section>
+
+
+    <!-- ================= CAKE ================= -->
+
+    <section id="cake" class="section cake-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">05</span>
+
+            <p>YOUR MOMENT</p>
+
+            <h2>
+                Make a<br>
+                <em>wish.</em>
+            </h2>
+
+        </div>
+
+        <div class="cake-wrapper">
+
+            <div class="cake">
+
+                <div class="candles">
+
+                    <button class="candle" data-candle="1">
+                        <i></i>
+                    </button>
+
+                    <button class="candle" data-candle="2">
+                        <i></i>
+                    </button>
+
+                    <button class="candle" data-candle="3">
+                        <i></i>
+                    </button>
+
+                </div>
+
+                <div class="cake-top"></div>
+                <div class="cake-body"></div>
+
+            </div>
+
+            <p id="wishText">
+                Click the candles and make your wish.
+            </p>
+
+        </div>
+
+    </section>
+    <!-- ================= BIRTHDAY POPUP ================= -->
+
+<div id="birthdayPopup" class="birthday-popup">
+
+    <div class="birthday-popup-card">
+
+        <div class="popup-heart">
+            ♡
+        </div>
+
+        <p class="popup-small">
+            YOUR WISH IS MADE AND I KNOW ITS ME🤗
+        </p>
+
+        <h2>
+            Once again Happiestt Birthday
+            <br>
+            <em>Meri jaann ♡</em>
+        </h2>
+
+        <div class="popup-line"></div>
+
+        <p>
+            So Mr.Sameer Uddin chalo mai apki wish puri karti hun..
+            Mai toh apko chodne wali nai hunn betaa😘
+            Hamesha mere duduu baby k saath ich rehtium💋In sha Allah❤
+        </p>
+
+        <button
+            id="closeBirthdayPopup"
+            type="button">
+            Continue ♡
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- ================= FINAL ================= -->
+
+    <section id="final" class="screen final-screen">
+
+        <div class="final-glow"></div>
+
+        <div class="final-content">
+
+            <div class="tiny-label">
+                AND ONE LAST THING TO SAY...
+            </div>
+
+            <h2>
+                I Love you soo muchh
+                <span id="finalName">You</span>
+                <b>♡</b>
+            </h2>
+
+            <div class="final-divider"></div>
+
+            <p>
+                If you ever forget how special you are,
+                come back here.
+            </p>
+
+            <p>
+                Because there will always be someone
+                wishing the very best for you.
+            </p>
+
+            <div class="final-message">
+                Here's to another beautiful chapter.
+                <br>
+                May it be your best one yet.
+            </div>
+
+            <div class="final-signature">
+                Made with ♡ by <span id="finalSender">Me</span>
+            </div>
+
+            <button id="restartBtn" class="main-btn">
+                EXPERIENCE AGAIN ✦
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GIFT MODAL ================= -->
+
+    <div id="giftModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-modal">
+                ×
+            </button>
+
+            <span>♡</span>
+
+            <p id="modalText"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,4089 @@
+/* =========================================
+   ROMANTIC WINE — COMPLETE STYLE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    transition:
+        background 0.8s ease,
+        color 0.8s ease;
+}
+
+button {
+    font-family: inherit;
+}
+
+.screen,
+.section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   🌹 ROMANTIC WINE THEME
+========================================= */
+
+body.bloom {
+
+    --bg: #180b10;
+
+    --bg2: #35151f;
+
+    --text: #f7e9e7;
+
+    --muted: #c5a8a8;
+
+    --accent: #b86b78;
+
+    --accent2: #e0a6ad;
+
+    --card: rgba(255, 238, 238, 0.07);
+
+    --border: rgba(232, 190, 196, 0.15);
+}
+
+
+/* =========================================
+   OPTIONAL OTHER THEMES
+========================================= */
+
+body.midnight {
+
+    --bg: #080910;
+
+    --bg2: #101221;
+
+    --text: #f1eff7;
+
+    --muted: #a6a5b7;
+
+    --accent: #9e8cff;
+
+    --accent2: #d2caff;
+
+    --card: rgba(255, 255, 255, 0.06);
+
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+
+body.memory {
+
+    --bg: #eee4d2;
+
+    --bg2: #e4d5bb;
+
+    --text: #40382f;
+
+    --muted: #85786a;
+
+    --accent: #8a6b4c;
+
+    --accent2: #c5a57a;
+
+    --card: rgba(255, 250, 240, 0.7);
+
+    --border: rgba(70, 50, 30, 0.15);
+}
+
+
+/* =========================================
+   🌙 MAIN BACKGROUND
+========================================= */
+
+body {
+
+    background: var(--bg);
+
+    color: var(--text);
+}
+
+
+.screen,
+.section {
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(145, 55, 75, 0.22),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(105, 32, 52, 0.25),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(190, 90, 105, 0.10),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #12070b,
+            #260e16 45%,
+            #17090e
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* =========================================
+   🌹 SOFT WINE GLOW — LEFT
+========================================= */
+
+.screen::before,
+.section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(126, 36, 58, 0.12);
+
+    filter: blur(110px);
+
+    top: 10%;
+    left: -220px;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   🌸 SOFT ROSE GLOW — RIGHT
+========================================= */
+
+.screen::after,
+.section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(190, 91, 108, 0.08);
+
+    filter: blur(110px);
+
+    right: -200px;
+    bottom: 10%;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   ❤️ FLOATING HEARTS
+========================================= */
+
+#particles {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+.particle {
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    background: transparent;
+
+    opacity: 0;
+
+    animation:
+        floatHeart linear infinite;
+}
+
+
+.particle::before {
+
+    content: "♡";
+
+    position: absolute;
+
+    color: var(--accent2);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    text-shadow:
+
+        0 0 8px
+        rgba(224, 166, 173, 0.45),
+
+        0 0 18px
+        rgba(184, 107, 120, 0.25);
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(110vh)
+            translateX(0)
+            rotate(-10deg)
+            scale(0.6);
+
+        opacity: 0;
+    }
+
+
+    15% {
+
+        opacity: 0.35;
+    }
+
+
+    50% {
+
+        transform:
+            translateY(50vh)
+            translateX(25px)
+            rotate(10deg)
+            scale(0.9);
+
+        opacity: 0.25;
+    }
+
+
+    80% {
+
+        opacity: 0.18;
+    }
+
+
+    100% {
+
+        transform:
+            translateY(-10vh)
+            translateX(-20px)
+            rotate(-10deg)
+            scale(0.7);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   ✨ TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3 {
+
+    text-shadow:
+        0 0 30px
+        rgba(224, 166, 173, 0.08);
+}
+
+
+.tiny-label {
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    font-weight: 500;
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   🌹 OPENING
+========================================= */
+
+#opening {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.opening-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 700px;
+
+    padding: 30px;
+}
+
+
+.opening-content h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            65px,
+            10vw,
+            125px
+        );
+
+    line-height: 0.8;
+
+    font-weight: 500;
+}
+
+
+.opening-content h1 span {
+
+    font-style: italic;
+
+    color: var(--accent);
+
+    text-shadow:
+
+        0 0 30px
+        rgba(184, 107, 120, 0.25);
+}
+
+
+.opening-content p {
+
+    margin-top: 40px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   ✦ MAIN BUTTON
+========================================= */
+
+.main-btn {
+
+    margin-top: 40px;
+
+    padding:
+        15px 30px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 100px;
+
+    background:
+        rgba(255, 235, 238, 0.05);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    backdrop-filter: blur(20px);
+
+    transition:
+        0.4s ease;
+
+    letter-spacing: 2px;
+
+    font-size: 11px;
+}
+
+
+.main-btn span {
+
+    margin-left: 10px;
+
+    color: var(--accent2);
+}
+
+
+.main-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    background:
+        rgba(155, 62, 82, 0.35);
+
+    color: #fff;
+
+    border-color:
+        rgba(224, 166, 173, 0.4);
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(80, 15, 30, 0.4),
+
+        0 0 30px
+        rgba(184, 107, 120, 0.12);
+}
+
+
+/* =========================================
+   🌙 SCROLL INDICATOR
+========================================= */
+
+.scroll-hint {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.scroll-hint span {
+
+    display: block;
+
+    width: 1px;
+
+    height: 60px;
+
+    background: var(--accent);
+
+    animation:
+        scrollLine 2s infinite;
+}
+
+
+@keyframes scrollLine {
+
+    0% {
+
+        transform:
+            scaleY(0);
+
+        transform-origin:
+            top;
+    }
+
+    50% {
+
+        transform:
+            scaleY(1);
+
+        transform-origin:
+            top;
+    }
+
+    51% {
+
+        transform-origin:
+            bottom;
+    }
+
+    100% {
+
+        transform:
+            scaleY(0);
+
+        transform-origin:
+            bottom;
+    }
+}
+
+
+/* =========================================
+   ✨ HERO
+========================================= */
+
+#hero {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.hero-content {
+
+    max-width: 900px;
+
+    padding: 40px;
+
+    position: relative;
+
+    z-index: 4;
+}
+
+
+.hero-content h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            55px,
+            8vw,
+            105px
+        );
+
+    line-height: 0.85;
+
+    font-weight: 500;
+}
+
+
+.hero-content h2 em {
+
+    color: #d28a96;
+
+    text-shadow:
+
+        0 0 25px
+        rgba(210, 138, 150, 0.25);
+}
+
+
+.hero-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background:
+        var(--accent);
+
+    margin:
+        40px auto;
+}
+
+
+.hero-description {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+
+.hero-description strong {
+
+    color:
+        var(--accent2);
+
+    font-weight: 500;
+}
+
+
+.birthday-title {
+
+    margin-top: 60px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            65px
+        );
+
+    letter-spacing: 4px;
+}
+
+
+.birthday-title span {
+
+    display: block;
+
+    color:
+        var(--accent);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1.5em;
+
+    letter-spacing: 0;
+
+    text-shadow:
+
+        0 0 25px
+        rgba(184, 107, 120, 0.25);
+}
+
+
+/* =========================================
+   ❤️ HEART ANIMATION
+========================================= */
+
+.birthday-title b,
+.final-content h2 b {
+
+    color:
+        #d98b98;
+
+    display: inline-block;
+
+    animation:
+        heartbeat 2s ease-in-out infinite;
+
+    text-shadow:
+
+        0 0 15px
+        rgba(217, 139, 152, 0.4);
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.18);
+    }
+}
+
+
+/* =========================================
+   📜 GENERAL SECTION
+========================================= */
+
+.section {
+
+    padding:
+        120px 8vw;
+
+    text-align:
+        center;
+}
+
+
+.section-heading {
+
+    max-width:
+        800px;
+
+    margin:
+        auto;
+
+    position:
+        relative;
+
+    z-index:
+        4;
+}
+
+
+.section-number {
+
+    display:
+        block;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        4px;
+
+    color:
+        var(--accent);
+
+    margin-bottom:
+        15px;
+}
+
+
+.section-heading p {
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        5px;
+
+    color:
+        var(--muted);
+
+    margin-bottom:
+        25px;
+}
+
+
+.section-heading h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            55px,
+            7vw,
+            90px
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        0.9;
+}
+
+
+.section-heading h2 em {
+
+    color:
+        #d28a96;
+
+    text-shadow:
+
+        0 0 25px
+        rgba(210, 138, 150, 0.22);
+}
+
+
+/* =========================================
+   ↓ CONTINUE BUTTON
+========================================= */
+
+.continue-btn {
+
+    margin-top:
+        80px;
+
+    background:
+        transparent;
+
+    border:
+        none;
+
+    color:
+        var(--muted);
+
+    cursor:
+        pointer;
+
+    letter-spacing:
+        2px;
+
+    font-size:
+        11px;
+
+    transition:
+        0.3s;
+
+    position:
+        relative;
+
+    z-index:
+        5;
+}
+
+
+.continue-btn:hover {
+
+    color:
+        var(--accent2);
+
+    transform:
+        translateY(4px);
+
+    text-shadow:
+
+        0 0 15px
+        rgba(224, 166, 173, 0.3);
+}
+
+
+/* =========================================
+   💌 LETTER
+========================================= */
+
+.letter-container {
+
+    max-width:
+        800px;
+
+    margin:
+        70px auto 0;
+
+    position:
+        relative;
+
+    z-index:
+        4;
+}
+
+
+.letter-paper {
+
+    position:
+        relative;
+
+    padding:
+        70px;
+
+    text-align:
+        left;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255, 235, 238, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border:
+        1px solid
+        rgba(224, 166, 173, 0.15);
+
+    backdrop-filter:
+        blur(25px);
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(0, 0, 0, 0.28),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.05);
+}
+
+
+.paper-top {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    color:
+        var(--muted);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        22px;
+}
+
+
+.paper-top span:last-child {
+
+    color:
+        var(--accent);
+}
+
+
+.letter-text {
+
+    margin-top:
+        50px;
+
+    white-space:
+        pre-line;
+
+    line-height:
+        2;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        22px;
+
+    color:
+        var(--text);
+}
+
+
+.signature {
+
+    margin-top:
+        50px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        20px;
+
+    color:
+        var(--muted);
+}
+
+
+.signature span {
+
+    color:
+        var(--accent2);
+}
+
+
+/* =========================================
+   📸 MEMORY TIMELINE
+========================================= */
+
+.memory-timeline {
+
+    position:
+        relative;
+
+    max-width:
+        1100px;
+
+    margin:
+        100px auto 0;
+
+    z-index:
+        4;
+}
+
+
+.timeline-line {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        0;
+
+    bottom:
+        0;
+
+    width:
+        1px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            var(--border),
+            var(--accent),
+            var(--border),
+            transparent
+        );
+}
+
+
+.memory-item {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    justify-content:
+        flex-start;
+
+    margin-bottom:
+        100px;
+}
+
+
+.memory-item.reverse {
+
+    justify-content:
+        flex-end;
+}
+
+
+.memory-dot {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        40px;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(24, 11, 16, 0.8);
+
+    border:
+        1px solid
+        var(--accent);
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    color:
+        var(--accent2);
+
+    font-size:
+        10px;
+
+    z-index:
+        2;
+
+    box-shadow:
+
+        0 0 25px
+        rgba(184, 107, 120, 0.12);
+}
+
+
+.memory-card {
+
+    width:
+        45%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255, 235, 238, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border:
+        1px solid
+        rgba(224, 166, 173, 0.15);
+
+    backdrop-filter:
+        blur(25px);
+
+    text-align:
+        left;
+
+    transition:
+        0.5s;
+
+    box-shadow:
+
+        0 20px 60px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.memory-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(0, 0, 0, 0.3),
+
+        0 0 30px
+        rgba(184, 107, 120, 0.08);
+}
+
+
+.memory-image {
+
+    height:
+        300px;
+
+    overflow:
+        hidden;
+}
+
+
+.memory-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        contain;
+
+    transition:
+        0.8s;
+}
+
+
+.memory-card:hover img {
+
+    transform:
+        scale(1.08);
+}
+
+
+.memory-info {
+
+    padding:
+        30px;
+}
+
+
+.memory-info span {
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        3px;
+
+    color:
+        var(--accent);
+}
+
+
+.memory-info h3 {
+
+    margin-top:
+        12px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        32px;
+
+    font-weight:
+        500;
+}
+
+
+.memory-info p {
+
+    margin-top:
+        12px;
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.8;
+
+    font-size:
+        13px;
+}
+
+
+/* =========================================
+   🌹 REASONS
+========================================= */
+
+.reason-grid {
+
+    max-width:
+        1000px;
+
+    margin:
+        80px auto 0;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        20px;
+
+    position:
+        relative;
+
+    z-index:
+        4;
+}
+
+
+.reason-card {
+
+    text-align:
+        left;
+
+    padding:
+        50px;
+
+    min-height:
+        250px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255, 235, 238, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border:
+        1px solid
+        rgba(224, 166, 173, 0.15);
+
+    backdrop-filter:
+        blur(25px);
+
+    transition:
+        0.4s;
+
+    box-shadow:
+
+        0 20px 50px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.reason-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(224, 166, 173, 0.28);
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(0, 0, 0, 0.25),
+
+        0 0 25px
+        rgba(184, 107, 120, 0.08);
+}
+
+
+.reason-card span {
+
+    color:
+        var(--accent2);
+
+    font-size:
+        11px;
+}
+
+
+.reason-card h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        38px;
+
+    margin-top:
+        25px;
+
+    font-weight:
+        500;
+}
+
+
+.reason-card p {
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.8;
+
+    margin-top:
+        10px;
+}
+
+
+/* =========================================
+   🎁 GIFTS
+========================================= */
+
+.gift-grid {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        50px;
+
+    margin-top:
+        100px;
+
+    flex-wrap:
+        wrap;
+
+    position:
+        relative;
+
+    z-index:
+        4;
+}
+
+
+.gift {
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        var(--text);
+
+    cursor:
+        pointer;
+}
+
+
+.gift-box {
+
+    width:
+        130px;
+
+    height:
+        130px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    font-size:
+        50px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255, 235, 238, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border:
+        1px solid
+        rgba(224, 166, 173, 0.15);
+
+    backdrop-filter:
+        blur(25px);
+
+    transition:
+        0.5s;
+
+    box-shadow:
+
+        0 20px 50px
+        rgba(0, 0, 0, 0.2);
+}
+
+
+.gift:hover .gift-box {
+
+    transform:
+        translateY(-15px)
+        rotate(3deg);
+
+    box-shadow:
+
+        0 30px 50px
+        rgba(0, 0, 0, 0.3),
+
+        0 0 25px
+        rgba(184, 107, 120, 0.1);
+}
+
+
+.gift span {
+
+    display:
+        block;
+
+    margin-top:
+        15px;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        3px;
+
+    color:
+        var(--muted);
+}
+
+
+.gift-message {
+
+    min-height:
+        30px;
+
+    margin-top:
+        60px;
+
+    color:
+        var(--accent2);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        25px;
+}
+
+
+/* =========================================
+   💌 GIFT MODAL
+========================================= */
+
+.modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        rgba(5, 2, 4, 0.72);
+
+    backdrop-filter:
+        blur(15px);
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transition:
+        0.4s;
+
+    z-index:
+        100;
+}
+
+
+.modal.show {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+}
+
+
+.modal-content {
+
+    position:
+        relative;
+
+    max-width:
+        500px;
+
+    padding:
+        70px 50px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2b111a,
+            #180b10
+        );
+
+    text-align:
+        center;
+
+    border:
+        1px solid
+        rgba(224, 166, 173, 0.18);
+
+    box-shadow:
+
+        0 30px 100px
+        rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content > span {
+
+    color:
+        var(--accent2);
+
+    font-size:
+        30px;
+}
+
+
+.modal-content p {
+
+    margin-top:
+        30px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        28px;
+
+    line-height:
+        1.5;
+}
+
+
+.close-modal {
+
+    position:
+        absolute;
+
+    right:
+        20px;
+
+    top:
+        15px;
+
+    background:
+        none;
+
+    border:
+        none;
+
+    font-size:
+        30px;
+
+    color:
+        var(--muted);
+
+    cursor:
+        pointer;
+
+    transition:
+        0.3s;
+}
+
+
+.close-modal:hover {
+
+    color:
+        var(--accent2);
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================================
+   🕯️ CAKE
+========================================= */
+
+.cake-section {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+}
+
+
+.cake-wrapper {
+
+    margin-top:
+        100px;
+
+    position:
+        relative;
+
+    z-index:
+        4;
+}
+
+
+.cake {
+
+    position:
+        relative;
+
+    width:
+        300px;
+
+    height:
+        220px;
+
+    margin:
+        auto;
+}
+
+
+.cake-body {
+
+    position:
+        absolute;
+
+    bottom:
+        20px;
+
+    left:
+        25px;
+
+    width:
+        250px;
+
+    height:
+        120px;
+
+    border-radius:
+        15px 15px 25px 25px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #d58a96,
+            #8f3d50
+        );
+
+    box-shadow:
+
+        0 30px 50px
+        rgba(0, 0, 0, 0.3),
+
+        0 0 30px
+        rgba(184, 107, 120, 0.1);
+}
+
+
+.cake-top {
+
+    position:
+        absolute;
+
+    bottom:
+        120px;
+
+    left:
+        25px;
+
+    width:
+        250px;
+
+    height:
+        45px;
+
+    border-radius:
+        50%;
+
+    background:
+        #d99aa4;
+}
+
+
+.candles {
+
+    position:
+        absolute;
+
+    z-index:
+        5;
+
+    bottom:
+        150px;
+
+    left:
+        60px;
+
+    width:
+        180px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+}
+
+
+.candle {
+
+    position:
+        relative;
+
+    width:
+        15px;
+
+    height:
+        65px;
+
+    border:
+        none;
+
+    background:
+        #f5e5e5;
+
+    cursor:
+        pointer;
+
+    border-radius:
+        5px 5px 2px 2px;
+}
+
+
+.candle i {
+
+    position:
+        absolute;
+
+    width:
+        18px;
+
+    height:
+        25px;
+
+    left:
+        -2px;
+
+    top:
+        -25px;
+
+    background:
+        #e6a05b;
+
+    border-radius:
+        50%;
+
+    box-shadow:
+
+        0 0 20px
+        #e6a05b;
+
+    animation:
+        flame 0.8s infinite alternate;
+}
+
+
+.candle.off i {
+
+    display:
+        none;
+}
+
+
+@keyframes flame {
+
+    from {
+
+        transform:
+            scale(0.8)
+            rotate(-3deg);
+    }
+
+    to {
+
+        transform:
+            scale(1.1)
+            rotate(3deg);
+    }
+}
+
+
+#wishText {
+
+    margin-top:
+        40px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* =========================================
+   ✨ FINAL SCREEN
+========================================= */
+
+.final-screen {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+}
+
+
+.final-content {
+
+    max-width:
+        850px;
+
+    padding:
+        40px;
+
+    position:
+        relative;
+
+    z-index:
+        4;
+}
+
+
+.final-content h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(
+            65px,
+            9vw,
+            120px
+        );
+
+    font-weight:
+        500;
+
+    line-height:
+        0.9;
+}
+
+
+.final-content h2 span {
+
+    color:
+        var(--accent2);
+
+    display:
+        inline-block;
+}
+
+
+.final-divider {
+
+    width:
+        60px;
+
+    height:
+        1px;
+
+    background:
+        var(--accent);
+
+    margin:
+        50px auto;
+
+    box-shadow:
+
+        0 0 15px
+        rgba(184, 107, 120, 0.3);
+}
+
+
+.final-content > p {
+
+    max-width:
+        500px;
+
+    margin:
+        15px auto;
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.8;
+}
+
+
+.final-message {
+
+    margin-top:
+        60px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        28px;
+
+    color:
+        var(--accent2);
+
+    line-height:
+        1.5;
+
+    text-shadow:
+
+        0 0 20px
+        rgba(224, 166, 173, 0.1);
+}
+
+
+.final-signature {
+
+    margin-top:
+        60px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        2px;
+}
+
+
+.final-signature span {
+
+    color:
+        var(--accent2);
+}
+
+
+/* =========================================
+   🎉 CONFETTI
+========================================= */
+
+.confetti {
+
+    position:
+        fixed;
+
+    width:
+        8px;
+
+    height:
+        15px;
+
+    top:
+        -20px;
+
+    z-index:
+        200;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+}
+
+
+@keyframes confettiFall {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+
+/* =========================================
+   🌙 EXTRA ROMANTIC LIGHT
+========================================= */
+
+#hero::after,
+#opening::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(205, 108, 125, 0.07);
+
+    filter:
+        blur(60px);
+
+    top:
+        25%;
+
+    right:
+        20%;
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================
+   📱 MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .section {
+
+        padding:
+            100px 6vw;
+    }
+
+
+    .opening-content {
+
+        padding:
+            25px;
+    }
+
+
+    .opening-content h1 {
+
+        font-size:
+            clamp(
+                60px,
+                18vw,
+                90px
+            );
+    }
+
+
+    .hero-content {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .hero-content h2 {
+
+        font-size:
+            clamp(
+                55px,
+                15vw,
+                85px
+            );
+    }
+
+
+    .birthday-title {
+
+        font-size:
+            28px;
+
+        letter-spacing:
+            2px;
+    }
+
+
+    .letter-paper {
+
+        padding:
+            35px 25px;
+    }
+
+
+    .letter-text {
+
+        font-size:
+            19px;
+
+        line-height:
+            1.9;
+    }
+
+
+    .memory-timeline {
+
+        margin-top:
+            60px;
+    }
+
+
+    .timeline-line {
+
+        left:
+            20px;
+    }
+
+
+    .memory-item,
+    .memory-item.reverse {
+
+        justify-content:
+            flex-end;
+    }
+
+
+    .memory-card {
+
+        width:
+            calc(100% - 50px);
+    }
+
+
+    .memory-dot {
+
+        left:
+            20px;
+
+        width:
+            40px;
+
+        height:
+            40px;
+    }
+
+
+    .memory-image {
+
+        height:
+            230px;
+    }
+
+
+    .memory-info {
+
+        padding:
+            25px;
+    }
+
+
+    .memory-info h3 {
+
+        font-size:
+            29px;
+    }
+
+
+    .reason-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            15px;
+    }
+
+
+    .reason-card {
+
+        padding:
+            35px;
+
+        min-height:
+            220px;
+    }
+
+
+    .reason-card h3 {
+
+        font-size:
+            34px;
+    }
+
+
+    .gift-grid {
+
+        gap:
+            25px;
+    }
+
+
+    .gift-box {
+
+        width:
+            100px;
+
+        height:
+            100px;
+
+        font-size:
+            40px;
+    }
+
+
+    .modal-content {
+
+        width:
+            90%;
+
+        padding:
+            60px 30px;
+    }
+
+
+    .modal-content p {
+
+        font-size:
+            24px;
+    }
+
+
+    .cake {
+
+        transform:
+            scale(0.8);
+    }
+
+
+    .final-content {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .final-content h2 {
+
+        font-size:
+            clamp(
+                60px,
+                16vw,
+                100px
+            );
+    }
+
+
+    .final-message {
+
+        font-size:
+            24px;
+    }
+
+
+    .particle::before {
+
+        font-size:
+            10px;
+    }
+
+}
+
+
+/* =========================================
+   ✨ VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    .opening-content h1 {
+
+        font-size:
+            58px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            52px;
+    }
+
+
+    .birthday-title {
+
+        font-size:
+            24px;
+    }
+
+
+    .gift-grid {
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+    }
+
+
+    .gift-box {
+
+        width:
+            110px;
+
+        height:
+            110px;
+    }
+
+}
+.final-message h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 4.5rem;
+    font-weight: 400;
+}
+/* =========================================
+   💌 LOVE ENVELOPE OPENING
+========================================= */
+
+.love-opening {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.tiny-label {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #8e3049;
+
+    margin-bottom: 12px;
+
+    opacity: .75;
+}
+
+
+.opening-title {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(42px, 7vw, 75px);
+
+    font-weight: 400;
+
+    line-height: .95;
+
+    color: #641f32;
+
+    margin: 10px 0 35px;
+}
+
+
+.opening-title em {
+
+    font-family: "Playfair Display", serif;
+
+    color: #a9516b;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   💌 ENVELOPE
+========================================= */
+
+.envelope-area {
+
+    perspective: 1000px;
+
+    margin: 5px 0 30px;
+}
+
+
+.envelope {
+
+    width: 270px;
+    height: 180px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transform-style: preserve-3d;
+}
+
+
+.envelope-back {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #6c2038,
+            #8e3049
+        );
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 25px 55px
+        rgba(83, 22, 40, .28);
+}
+
+
+.envelope-front {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #7d2940;
+
+    clip-path: polygon(
+        0 0,
+        50% 55%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    z-index: 4;
+}
+
+
+.envelope-flap {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #a9516b,
+            #8e3049
+        );
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 58%
+    );
+
+    transform-origin: top;
+
+    transition:
+        transform 1s
+        cubic-bezier(.4,0,.2,1);
+
+    z-index: 6;
+}
+
+
+.envelope-letter {
+
+    position: absolute;
+
+    width: 82%;
+    height: 82%;
+
+    left: 9%;
+    top: 9%;
+
+    background: #fff8f5;
+
+    border-radius: 4px;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #8e3049;
+
+    font-size: 36px;
+
+    transition:
+        transform 1s ease;
+}
+
+
+.envelope-heart {
+
+    position: absolute;
+
+    z-index: 8;
+
+    left: 50%;
+    top: 58%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffd9e1,
+            #f0a7b9
+        );
+
+    color: #7d2940;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+
+    box-shadow:
+        0 7px 22px
+        rgba(80,20,35,.25);
+
+    transition: opacity .4s ease;
+}
+
+
+/* OPEN */
+
+.envelope.open .envelope-flap {
+
+    transform: rotateX(180deg);
+}
+
+
+.envelope.open .envelope-letter {
+
+    transform:
+        translateY(-100px);
+}
+
+
+.envelope.open .envelope-heart {
+
+    opacity: 0;
+}
+
+
+/* =========================================
+   💕 OPEN WITH LOVE
+========================================= */
+
+.love-button {
+
+    border: 1px solid
+        rgba(125,41,64,.3);
+
+    background:
+        rgba(255,248,245,.85);
+
+    color: #641f32;
+
+    padding: 16px 32px;
+
+    border-radius: 50px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: all .35s ease;
+
+    box-shadow:
+        0 10px 25px
+        rgba(90,20,40,.08);
+}
+
+
+.love-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    background: #7d2940;
+
+    color: white;
+
+    box-shadow:
+        0 15px 30px
+        rgba(90,20,40,.2);
+}
+
+
+/* =========================================
+   🧸 DUDU BUBU VIDEO
+========================================= */
+
+.secret-area {
+
+    width: min(500px, 92%);
+
+    margin-top: 45px;
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+
+    pointer-events: none;
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+
+.secret-area.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    pointer-events: auto;
+}
+
+
+.dudu-bubu {
+
+    width: 180px;
+    height: 180px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    animation:
+        duduFloat 3s ease-in-out infinite;
+}
+
+
+.dudu-bubu video {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    border: none;
+
+    background: transparent;
+
+    filter:
+        drop-shadow(
+            0 15px 25px
+            rgba(100,31,50,.18)
+        );
+}
+
+
+@keyframes duduFloat {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(-2deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            rotate(2deg);
+
+    }
+}
+
+
+.secret-area h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    color: #641f32;
+
+    margin:
+        15px 0 4px;
+}
+
+
+.secret-subtitle {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #9b5367;
+
+    opacity: .8;
+}
+
+
+/* =========================================
+   💕 FLOATING HEARTS
+========================================= */
+
+.floating-heart {
+
+    position: absolute;
+
+    right: -5px;
+    top: 5px;
+
+    font-size: 22px;
+
+    color: #c76b83;
+
+    animation:
+        heartFloat 2s ease-in-out infinite;
+}
+
+
+.heart-two {
+
+    left: -15px;
+    top: 50px;
+
+    animation-delay: .5s;
+}
+
+
+.heart-three {
+
+    right: 0;
+    bottom: 10px;
+
+    animation-delay: 1s;
+}
+
+
+@keyframes heartFloat {
+
+    0%, 100% {
+
+        opacity: .3;
+
+        transform:
+            translateY(5px)
+            scale(.8);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translateY(-8px)
+            scale(1);
+
+    }
+}
+
+
+/* =========================================
+   🔐 PIN BOX
+========================================= */
+
+.pin-lock {
+
+    margin:
+        28px auto 0;
+
+    width:
+        min(360px, 100%);
+
+    padding:
+        30px 25px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,230,236,.94),
+            rgba(255,248,245,.96)
+        );
+
+    border:
+        1px solid
+        rgba(126,38,65,.16);
+
+    box-shadow:
+        0 25px 60px
+        rgba(91,25,47,.15),
+
+        inset
+        0 1px 0
+        rgba(255,255,255,.9);
+
+    backdrop-filter:
+        blur(15px);
+}
+
+
+.lock-icon {
+
+    width: 58px;
+    height: 58px;
+
+    margin:
+        0 auto 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #7d2940,
+            #c76b83
+        );
+
+    color: white;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(126,38,65,.25);
+}
+
+
+.pin-title {
+
+    margin:
+        8px 0 3px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 29px;
+
+    color: #641f32;
+}
+
+
+.pin-hint {
+
+    margin:
+        0 0 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    color: #9b5367;
+}
+
+
+/* =========================================
+   💗 PIN HEART DISPLAY
+========================================= */
+
+.heart-pin-display {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin:
+        5px 0 25px;
+}
+
+
+.heart-pin-display span {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #d28a9d;
+
+    font-size: 27px;
+
+    transition:
+        transform .25s ease,
+        color .25s ease;
+}
+
+
+.heart-pin-display span.filled {
+
+    color: #7d2940;
+
+    transform:
+        scale(1.2);
+
+    text-shadow:
+        0 5px 15px
+        rgba(125,41,64,.3);
+}
+
+
+/* =========================================
+   💗 HEART KEYPAD
+========================================= */
+
+.heart-keypad {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 13px;
+
+    width: 235px;
+
+    margin: auto;
+}
+
+
+.heart-key {
+
+    border: none;
+
+    background: transparent;
+
+    width: 62px;
+    height: 58px;
+
+    margin: auto;
+
+    position: relative;
+
+    color: white;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.heart-key::before,
+.heart-key::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+
+    width: 31px;
+    height: 48px;
+
+    border-radius:
+        31px 31px 0 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f2a8ba,
+            #8e3049
+        );
+
+    z-index: -1;
+}
+
+
+.heart-key::before {
+
+    left: 29px;
+
+    transform:
+        rotate(-45deg);
+
+    transform-origin:
+        0 100%;
+}
+
+
+.heart-key::after {
+
+    left: 0;
+
+    transform:
+        rotate(45deg);
+
+    transform-origin:
+        100% 100%;
+}
+
+
+.heart-key:hover {
+
+    transform:
+        scale(1.12);
+}
+
+
+.heart-key:active {
+
+    transform:
+        scale(.92);
+}
+
+
+/* =========================================
+   💕 UNLOCK
+========================================= */
+
+.unlock-button {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #641f32,
+            #9b405b,
+            #c76b83
+        );
+
+    color: white;
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(100,31,50,.22);
+
+    transition:
+        transform .3s ease;
+}
+
+
+.unlock-button:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+.unlock-button:disabled {
+
+    opacity: .65;
+
+    cursor: default;
+}
+
+
+#pinMessage {
+
+    min-height: 22px;
+
+    margin-top: 13px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 18px;
+
+    color: #7d2940;
+}
+
+
+/* =========================================
+   ❌ WRONG PIN
+========================================= */
+
+.pin-lock.shake {
+
+    animation:
+        pinShake .45s ease;
+}
+
+
+@keyframes pinShake {
+
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+
+/* =========================================
+   📱 MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .envelope {
+
+        width: 230px;
+        height: 153px;
+    }
+
+    .dudu-bubu {
+
+        width: 155px;
+        height: 155px;
+    }
+
+    .opening-title {
+
+        font-size: 48px;
+    }
+
+    .secret-area h2 {
+
+        font-size: 30px;
+    }
+
+}
+/* =========================================
+   💌 DUDU BUBU INSIDE ENVELOPE
+========================================= */
+
+.envelope-letter {
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        transform 1s ease,
+        opacity 0.5s ease;
+}
+
+.envelope-letter img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* Show Dudu-Bubu only when envelope opens */
+
+.envelope.open .envelope-letter {
+    opacity: 1;
+    transform: translateY(-100px);
+}
+/* =========================================
+   💌 KEEP DUDU-BUBU ABOVE ENVELOPE
+========================================= */
+
+.envelope-letter {
+    z-index: 7 !important;
+}
+
+.envelope-letter img {
+    position: relative;
+    z-index: 8;
+}
+
+.envelope-flap {
+    z-index: 6;
+}
+
+.envelope-front {
+    z-index: 4;
+}
+
+.envelope-heart {
+    z-index: 9;
+}
+/* =========================================
+   💌 KEEP ENVELOPE BELOW THE TITLE
+========================================= */
+
+.envelope-area {
+    margin-top: 70px;
+    position: relative;
+    z-index: 5;
+}
+
+.envelope {
+    position: relative;
+    z-index: 5;
+}
+
+.envelope.open .envelope-letter {
+    transform: translateY(-55px);
+}
+/* =========================================
+   🔒 PIN LOCK
+========================================= */
+
+body.pin-locked > #hero,
+body.pin-locked > #letter,
+body.pin-locked > #memories,
+body.pin-locked > #appreciation,
+body.pin-locked > #gifts,
+body.pin-locked > #cake,
+body.pin-locked > #final {
+    display: none !important;
+}
+
+
+/* Opening section remains usable */
+
+body.pin-locked #opening {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+}
+
+
+/* Normal website after PIN */
+
+body.pin-unlocked {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* =========================================
+   💌 HEART LETTER REVEAL
+========================================= */
+
+.letter-section {
+    perspective: 1600px;
+}
+
+
+/* CLOSED LETTER */
+
+.letter-reveal {
+    position: relative;
+    width: min(560px, 88%);
+    height: 420px;
+    margin: 50px auto 70px;
+    cursor: pointer;
+    perspective: 1600px;
+}
+
+
+/* =========================================
+   FRONT COVER
+========================================= */
+
+.letter-cover {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 246, 248, 0.98),
+            rgba(247, 224, 230, 0.98)
+        );
+
+    border: 1px solid rgba(125, 41, 64, 0.18);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 25px 70px rgba(80, 20, 40, 0.16),
+        inset 0 0 40px rgba(255,255,255,0.5);
+
+    transform-origin: left center;
+
+    transition:
+        transform 1.2s cubic-bezier(.77,0,.18,1),
+        opacity 0.8s ease;
+
+    z-index: 5;
+
+    overflow: hidden;
+}
+
+
+/* PAPER TEXTURE */
+
+.letter-cover::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(125,41,64,0.06),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(125,41,64,0.05),
+            transparent 30%
+        );
+
+    pointer-events: none;
+}
+
+
+/* HEART */
+
+.cover-heart {
+    font-size: 52px;
+    color: #7d2940;
+
+    margin-bottom: 15px;
+
+    animation: letterHeart 2.5s ease-in-out infinite;
+}
+
+
+@keyframes letterHeart {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* COVER TEXT */
+
+.cover-small {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #9b4059;
+
+    margin-bottom: 18px;
+}
+
+
+.letter-cover h3 {
+    position: relative;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    color: #4b2430;
+
+    margin: 0;
+}
+
+
+.letter-cover h3 em {
+    font-family: "Great Vibes", cursive;
+    font-size: 42px;
+    color: #7d2940;
+}
+
+
+.cover-hint {
+    margin-top: 28px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #9b4059;
+
+    animation: hintPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes hintPulse {
+
+    0%, 100% {
+        opacity: .55;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+.cover-line {
+    width: 80px;
+    height: 1px;
+
+    margin-top: 15px;
+
+    background: #9b4059;
+    opacity: .4;
+}
+
+
+/* =========================================
+   ACTUAL LETTER
+========================================= */
+
+.letter-inside {
+    position: absolute;
+
+    inset: 0;
+
+    padding: 55px 60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #f9f0e9
+        );
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 25px 70px rgba(60,20,30,.18);
+
+    overflow-y: auto;
+
+    opacity: 0;
+
+    transform:
+        rotateY(180deg)
+        scale(.96);
+
+    transition:
+        transform 1.2s cubic-bezier(.77,0,.18,1),
+        opacity .5s ease;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   OPEN STATE
+========================================= */
+
+.letter-reveal.open .letter-cover {
+
+    transform: rotateY(-180deg);
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.letter-reveal.open .letter-inside {
+
+    transform:
+        rotateY(0deg)
+        scale(1);
+
+    opacity: 1;
+
+}
+
+
+/* =========================================
+   LETTER CONTENT
+========================================= */
+
+.letter-inside .paper-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid rgba(125,41,64,.15);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    color: #5c303d;
+}
+
+
+.letter-inside .letter-text {
+
+    white-space: pre-line;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color: #4b3038;
+
+}
+
+
+.letter-inside .signature {
+
+    margin-top: 30px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    color: #5c303d;
+
+}
+
+
+.letter-inside .signature span {
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 30px;
+
+    color: #7d2940;
+
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.letter-reveal:not(.open):hover .letter-cover {
+
+    transform:
+        translateY(-8px)
+        rotateX(2deg);
+
+    box-shadow:
+        0 35px 80px rgba(80,20,40,.22);
+}
+
+
+.letter-reveal:not(.open):hover .cover-heart {
+
+    transform: scale(1.15);
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .letter-reveal {
+        height: 500px;
+    }
+
+    .letter-cover {
+        padding: 30px;
+    }
+
+    .letter-cover h3 {
+        font-size: 28px;
+    }
+
+    .letter-cover h3 em {
+        font-size: 36px;
+    }
+
+    .letter-inside {
+        padding: 35px 28px;
+    }
+
+    .letter-inside .letter-text {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+}
+/* =========================================
+   🎉 BIRTHDAY POPUP
+========================================= */
+
+.birthday-popup {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(45, 15, 25, 0.45);
+
+    backdrop-filter: blur(8px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity .6s ease,
+        visibility .6s ease;
+
+    z-index: 9999;
+}
+
+
+.birthday-popup.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+.birthday-popup-card {
+
+    width: min(500px, 92%);
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf8,
+            #f8e5ea
+        );
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 30px 100px
+        rgba(50, 10, 25, .35);
+
+    transform:
+        scale(.75)
+        translateY(30px);
+
+    transition:
+        transform .7s
+        cubic-bezier(.175,.885,.32,1.275);
+
+}
+
+
+.birthday-popup.show
+.birthday-popup-card {
+
+    transform:
+        scale(1)
+        translateY(0);
+
+}
+
+
+.popup-heart {
+
+    font-size: 60px;
+
+    color: #7d2940;
+
+    animation:
+        popupHeart 1.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes popupHeart {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+.popup-small {
+
+    margin-top: 10px;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #9b4059;
+
+}
+
+
+.birthday-popup-card h2 {
+
+    margin: 20px 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 38px;
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    color: #4b2430;
+
+}
+
+
+.birthday-popup-card h2 em {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 44px;
+
+    color: #7d2940;
+
+}
+
+
+.popup-line {
+
+    width: 80px;
+
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: #9b4059;
+
+    opacity: .4;
+
+}
+
+
+.birthday-popup-card > p {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: #5c303d;
+
+}
+
+
+#closeBirthdayPopup {
+
+    margin-top: 25px;
+
+    padding: 13px 28px;
+
+    border: 1px solid
+        rgba(125,41,64,.3);
+
+    border-radius: 30px;
+
+    background: transparent;
+
+    color: #7d2940;
+
+    font-family: "Inter", sans-serif;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+
+#closeBirthdayPopup:hover {
+
+    background: #7d2940;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   🎊 CONFETTI
+========================================= */
+
+.birthday-confetti {
+
+    position: fixed;
+
+    top: -20px;
+
+    width: 9px;
+    height: 14px;
+
+    border-radius: 2px;
+
+    background: #d98ca3;
+
+    pointer-events: none;
+
+    z-index: 10000;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+
+}
+
+
+.birthday-confetti:nth-child(3n) {
+    background: #f2c6d2;
+}
+
+.birthday-confetti:nth-child(3n + 1) {
+    background: #b85c78;
+}
+
+.birthday-confetti:nth-child(3n + 2) {
+    background: #e8a6b8;
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        top: -20px;
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        top: 110vh;
+
+        opacity: 0;
+
+        transform:
+            translateX(
+                calc(
+                    -100px +
+                    200px *
+                    var(--random)
+                )
+            )
+            rotate(720deg);
+
+    }
+
+}
